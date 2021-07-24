@@ -5,6 +5,8 @@
 </p>
 
 # DraganusBot XD
+## This is a Fork of Project Fizilion
+Go [Here](https://github.com/PrajjuS/ProjectFizilion) very cool Bot
 
 ![Spec](https://img.shields.io/badge/Made%20with-LOVE-black?style=for-the-badge)
 
