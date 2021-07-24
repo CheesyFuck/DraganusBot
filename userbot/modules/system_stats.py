@@ -249,7 +249,7 @@ async def amireallyalive(alive):
         f"•`User           : {DEFAULTUSER} `\n"
         f"•`Running on     : {repo.active_branch.name} `\n"
         f"•`Loaded modules : {len(modules)} `\n"
-        f"•`Fizilion       : {USERBOT_VERSION} `\n"
+        f"•`Draganus       : {USERBOT_VERSION} `\n"
         f"•`Bot Uptime     : {uptime} `\n"
         f"`===============================`\n"
 
