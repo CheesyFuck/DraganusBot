@@ -36,6 +36,7 @@ from userbot import (
     G_DRIVE_FOLDER_ID,
     LOGS,
     TEMP_DOWNLOAD_DIRECTORY,
+    GDRIVE_INDEX_URL,
     CMD_HELP,
 )
 from userbot.utils import (
@@ -227,6 +228,7 @@ async def get_file_id(input_str):
 async def download(event, gdrive, service, uri=None):
     start = datetime.now()
     global is_cancelled
+    global GDRIVE_INDEX_URL
     reply = ""
     """ - Download files to local then upload - """
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
@@ -271,10 +273,24 @@ async def download(event, gdrive, service, uri=None):
             """ asumming newest files are the cancelled one """
             newest = max(names, key=os.path.getctime)
             os.remove(newest)
-            reply += (
-                "**FILE - CANCELLED**\n\n"
-                "**Status : **`OK - received signal cancelled.`"
-            )
+            if GDRIVE_INDEX_URL:
+                gurl = requests.utils.requote_uri(f'{GDRIVE_INDEX_URL}{file_name}')
+                reply += (
+                    f"`{status}`\n\n"
+                    f"`Name   :` `{file_name}`\n"
+                    f"`Size   :` `{humanbytes(result[0])}`\n"
+                    f"`Link   :` [{file_name}]({result[1]})\n"
+                    f"`Index  :` [here]({gurl})\n"
+                    "`Status :` **OK** - Successfully uploaded.\n\n"
+                    )
+            else:
+                reply += (
+                    f"`{status}`\n\n"
+                    f"`Name   :` `{file_name}`\n"
+                    f"`Size   :` `{humanbytes(result[0])}`\n"
+                    f"`Link   :` [{file_name}]({result[1]})\n"
+                    "`Status :` **OK** - Successfully uploaded.\n\n"
+                    )
             return reply
         else:
             required_file_name = downloaded_file_name
@@ -1413,11 +1429,25 @@ async def google_drive(gdrive):
     end = datetime.now()
     ms = (end - start).seconds
     if result:
-        await gdrive.edit(
-            f"**File Uploaded in **`{ms} seconds`\n\n"
-            f"**Size : **`{humanbytes(result[0])}`\n"
-            f"**Link :** [{file_name}]({result[1]})\n",
-            link_preview=False,
+        if GDRIVE_INDEX_URL:
+            gurl = requests.utils.requote_uri(f'{GDRIVE_INDEX_URL}{file_name}')
+            await gdrive.respond(
+                f"`[FILE - UPLOAD]`\n\n"
+                f"`Name   :` `{file_name}`\n"
+                f"`Size   :` `{humanbytes(result[0])}`\n"
+                f"`Link   :` [{file_name}]({result[1]})\n"
+                f"`Index  :` [here]({gurl})\n"
+                f"`Status :` **OK** - Successfully uploaded.\n\n",
+                link_preview=False
+                    )
+        else:
+            await gdrive.respond(
+                "`[FILE - UPLOAD]`\n\n"
+                f"`Name   :` `{file_name}`\n"
+                f"`Size   :` `{humanbytes(result[0])}`\n"
+                f"`Link   :` [{file_name}]({result[1]})\n"
+                "`Status :` **OK** - Successfully uploaded.\n",
+                link_preview=False,
         )
     return
 
