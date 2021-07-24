@@ -4,13 +4,7 @@
    <br>
 </p>
 
-# Project Fizilion
-
-[![Build](https://img.shields.io/github/workflow/status/PrajjuS/ProjectFizilion/FailedChecker?style=for-the-badge)](https://github.com/PrajjuS/ProjectFizilion/actions "build")
-
-![Docker_Size](https://img.shields.io/docker/image-size/elytra8/fizfed?style=for-the-badge)
-
-![Docker_Pulls](https://img.shields.io/docker/pulls/elytra8/fizfed?style=for-the-badge)
+# DraganusBot XD
 
 ![Spec](https://img.shields.io/badge/Made%20with-LOVE-black?style=for-the-badge)
 
@@ -40,7 +34,7 @@
 
 ### Run on your terminal
 ```
-wget https://raw.githubusercontent.com/PrajjuS/ProjectFizilion/demon/terminal_getstring.sh && bash terminal_getstring.sh
+wget https://raw.githubusercontent.com/DGJM/DraganusBot/demon/terminal_getstring.sh && bash terminal_getstring.sh
 ```
 
 ## How To Host?
@@ -48,12 +42,12 @@ wget https://raw.githubusercontent.com/PrajjuS/ProjectFizilion/demon/terminal_ge
 ### Deploy on Heroku
 Make sure you have an account of heroku and follow all the steps required.
 
-<p align="left"><a href="https://heroku.com/deploy?template=https://github.com/PrajjuS/ProjectFizilion/tree/demon"> <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" /></a></p>
+<p align="left"><a href="https://heroku.com/deploy?template=https://github.com/DGJM/DraganusBot/tree/demon"> <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" /></a></p>
 
 
 ## Groups and Support
 
-For discussion, bug reporting, and help, you can join [Project Fizilion](https://t.me/ProjectFizilionChat) support group.
+For discussion, bug reporting, and help, you can join [Draganus XD](https://youtu.be/dQw4w9WgXcQ) support group.
 For further guide you can read this [Guide](https://telegra.ph/How-to-host-a-Telegram-Userbot-07-01-2).
 
 
@@ -68,11 +62,10 @@ Thanks:
 * [GengKapak](https://github.com/GengKapak) - DCLXVI
 * [Mkaraniya](https://github.com/mkaraniya) & [Dev73](https://github.com/Devp73) - OpenUserBot
 * [MoveAngel](https://github.com/MoveAngel) - One4U
+* [PrajjuS](https://github.com/PrajjuS) - ProjectFizilion
 
-and many more people who aren't mentioned here, but may be found in [Contributors](https://github.com/PrajjuS/ProjectFizilion/graphs/contributors).
+and many more people who aren't mentioned here, but may be found in [Contributors](https://github.com/DGJM/DraganusBot/graphs/contributors).
 
 ## License
 
-This userbot licensed on [Raphielscape Public License](https://github.com/PrajjuS/ProjectFizilion/blob/demon/LICENSE) - Version 1.d, February 2020
-
-Graphics Copyrighted By [ElytrA8](https://t.me/ElytrA8) © 2021
+This userbot licensed on [Raphielscape Public License](https://github.com/DGJM/DraganusBot/blob/demon/LICENSE) - Version 1.d, February 2020
